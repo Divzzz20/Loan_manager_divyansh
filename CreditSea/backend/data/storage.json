@@ -1,0 +1,33 @@
+{
+  "loanDetails": [
+    {
+      "id": "da2a268d-d8ca-4651-bbc4-69c970a59961",
+      "fullName": "Divyans",
+      "loanTenure": 6,
+      "reason": "car",
+      "requiredAmount": "90",
+      "employmentStatus": "no",
+      "address1": "nagpur",
+      "address2": "india",
+      "dateApplied": "2025-04-06T17:57:48.609Z",
+      "loanStatus": "accepted",
+      "status": "accepted",
+      "rejectedAt": "2025-04-06T18:05:32.430Z",
+      "acceptedAt": "2025-04-06T18:08:00.731Z"
+    },
+    {
+      "id": "5e4760d8-7df8-4f7a-936e-1b5caab463c4",
+      "fullName": "shashwat",
+      "loanTenure": 6,
+      "reason": "student loan",
+      "requiredAmount": "10000000",
+      "employmentStatus": "unemployed",
+      "address1": "ghjk",
+      "address2": "ghjk",
+      "dateApplied": "2025-04-06T18:09:46.182Z",
+      "loanStatus": "accepted",
+      "status": "accepted",
+      "acceptedAt": "2025-04-06T18:11:26.744Z"
+    }
+  ]
+}
