@@ -28,10 +28,11 @@ import { useEffect, useState } from "react";
 import { ResponseData } from "./UserDashboard";
 import axios from "axios";
 import { useAppSelector } from "../utils/hooks";
+import { API_URL } from "../config";
 
 const handleVerify = async (id: string) => {
   try {
-    const response = await axios.patch(`http://localhost:3000/loan/${id}/verify`);
+    const response = await axios.patch(`${API_URL}/loan/${id}/verify`);
     alert("Loan verified successfully");
     window.location.reload(); // Refresh data
   } catch (error) {
@@ -41,7 +42,7 @@ const handleVerify = async (id: string) => {
 
 const handleReject = async (id: string) => {
   try {
-    const response = await axios.patch(`http://localhost:3000/loan/${id}/reject`);
+    const response = await axios.patch(`${API_URL}/loan/${id}/reject`);
     alert("Loan rejected successfully");
     window.location.reload(); // Refresh data
   } catch (error) {
@@ -70,7 +71,7 @@ function VerifierDashboard() {
 
     useEffect(() => {
         const handleData = async () => {
-            const response = await axios.get("http://localhost:3000/loan/many");
+            const response = await axios.get(`${API_URL}/loan/many`);
             const data: { data?: ResponseData[] } = response.data as { data?: ResponseData[] };
             if (data.data !== undefined) {
                 let result: LoanDetailsVerifier[] = [];

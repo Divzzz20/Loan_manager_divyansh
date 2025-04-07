@@ -8,6 +8,7 @@ import Close from "../assets/close.png";
 import Navbar from "./Navbar";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
+import { API_URL } from "../config";
 
 export type ResponseData = {
     fullName: string,
@@ -22,7 +23,7 @@ function UserDashboard() {
 
     useEffect(() => {
         const handleData = async () => {
-            const response = await axios.get("http://localhost:3000/loan/many");
+            const response = await axios.get(`${API_URL}/loan/many`);
             const data: { data?: ResponseData[] } = response.data as { data?: ResponseData[] };
             if (data.data !== undefined) {
                 let result: LoanDetails[] = [];
