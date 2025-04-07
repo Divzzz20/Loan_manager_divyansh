@@ -39,3 +39,10 @@ npm install
 # Install backend dependencies
 cd backend
 npm install
+
+# Start frontend
+npm run dev
+
+# Start backend
+cd backend
+npm run start:dev
